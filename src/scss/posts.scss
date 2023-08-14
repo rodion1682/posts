@@ -1,0 +1,155 @@
+@import "./fonts.scss";
+@import "./consts.scss";
+
+.post {
+	display: flex;
+	padding: 15px;
+	border: 2px solid $blue;
+	margin-top: 15px;
+	justify-content: space-between;
+	gap: 30px;
+	@media (max-width: $md4) {
+		flex-wrap: wrap;
+	}
+	@media (max-width: $md5) {
+		margin: 0px -15px 0px -15px;
+		border: none;
+	}
+	// .post__content
+	&__content {
+		font-family: "Poppins";
+	}
+	// .post__top
+	&__top {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 20px;
+		line-height: 25px;
+		font-weight: 700;
+		&:not(:last-child) {
+			margin: 0px 0px 10px 0px;
+		}
+	}
+	// .post__id
+	&__id {
+	}
+	// .post__title
+	&__title {
+	}
+	// .post__body
+	&__body {
+		font-size: 16px;
+		line-height: 19px;
+	}
+	// .post__actions
+	&__actions {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		@media (max-width: $md4) {
+			flex: 1 1 100%;
+			flex-direction: row;
+			button {
+				flex: 0 1 50%;
+			}
+		}
+		@media (max-width: $md5) {
+			flex-wrap: wrap;
+			button {
+				flex: 1 1 100%;
+			}
+		}
+	}
+	// .post__button
+	&__button {
+		@media (max-width: $md4) {
+			flex: 0 1 50%;
+		}
+	}
+}
+
+.post-list {
+	max-width: 830px;
+	padding: 0px 15px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+	// .post-list__title
+	&__title {
+		font-size: 40px;
+		line-height: 45px;
+		font-weight: 700;
+		font-family: "Poppins";
+		&:not(:last-child) {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+	// .post-list__button
+	&__button {
+		&:not(:last-child) {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+	// .post-list__search
+	&__search {
+		&:not(:last-child) {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+	// .post-list__actions
+	&__actions {
+		display: flex;
+		gap: 20px;
+		@media (max-width: $md4) {
+			flex-wrap: wrap;
+		}
+	}
+	// .post-list__input
+	&__input {
+		flex: 0 1 50%;
+		@media (max-width: $md4) {
+			flex: 1 1 100%;
+		}
+	}
+	// .post-list__select
+	&__select {
+		flex: 0 1 50%;
+		@media (max-width: $md4) {
+			flex: 1 1 100%;
+		}
+	}
+	// .post-list__form
+	&__form {
+		&-input {
+			&:not(:last-child) {
+				margin: 0px 0px 15px 0px;
+			}
+		}
+	}
+	// .post-list__body
+	&__body {
+		&:not(:last-child) {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+	// .post-list__pagination
+	&__pagination {
+	}
+}
+
+.post-transition {
+	&-enter {
+		opacity: 0;
+	}
+	&-active {
+		opacity: 1;
+		transition: opacity 300ms ease-in;
+	}
+	&-exit {
+		opacity: 1;
+	}
+	&-exit-active {
+		opacity: 0;
+		transition: opacity 300ms ease-in;
+	}
+}

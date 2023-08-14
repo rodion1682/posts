@@ -1,0 +1,77 @@
+@import "./consts.scss";
+.post-page {
+	max-width: 800px;
+	padding: 0px 15px 50px 15px;
+	margin: 0 auto;
+	font-family: "Poppins";
+	// .post-page__title
+	&__title {
+		font-family: "Poppins";
+		text-align: center;
+		font-size: 40px;
+		line-height: 45px;
+		font-weight: 700;
+		&:not(:last-child) {
+			margin: 0px 0px 15px 0px;
+		}
+		@media (max-width: $md4) {
+			font-size: 30px;
+			line-height: 35px;
+			&:not(:last-child) {
+				margin: 0px 0px 25px 0px;
+			}
+		}
+		@media (max-width: $md5) {
+			font-size: 25px;
+			line-height: 30px;
+		}
+	}
+	// .post-page__top
+	&__top {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 20px;
+		line-height: 25px;
+		font-weight: 700;
+		&:not(:last-child) {
+			margin: 0px 0px 10px 0px;
+		}
+	}
+	//.post-page__id
+	&__id {
+	}
+	// .post-page__label
+	&__label {
+	}
+	// .post-page__body
+	&__body {
+		font-size: 16px;
+		line-height: 19px;
+		&:not(:last-child) {
+			margin: 0px 0px 25px 0px;
+		}
+	}
+	// .post-page__small-title
+	&__small-title {
+		font-size: 25px;
+		line-height: 30px;
+		font-weight: 700;
+		&:not(:last-child) {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+	// post-page__content
+	&__content {
+		&:not(:last-child) {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+	// .post-page__user
+	&__user {
+		font-weight: 700;
+		&:not(:last-child) {
+			margin: 0px 0px 10px 0px;
+		}
+	}
+}

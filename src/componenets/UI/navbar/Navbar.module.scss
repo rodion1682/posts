@@ -1,0 +1,35 @@
+@import "../../../scss//consts.scss";
+@import "../../../scss//fonts.scss";
+
+.navigation {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0 15px;
+	background-color: $blue;
+	margin-bottom: 20px;
+	// .navigation__list
+	&__list {
+		display: flex;
+	}
+	// .navigation__item
+	&__item {
+	}
+	// .navigation__link
+	&__link {
+		color: #fff;
+		font-family: "Poppins";
+		display: block;
+		padding: 10px 15px;
+		transition: background-color 0.3s ease 0s;
+		&:not(:last-child) {
+			margin: 0px 15px 0px 0px;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $blue-hover;
+			}
+		}
+	}
+}

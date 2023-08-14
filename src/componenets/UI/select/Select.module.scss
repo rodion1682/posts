@@ -1,0 +1,99 @@
+@import "../../../scss/consts.scss";
+@import "../../../scss/consts.scss";
+
+.select {
+	width: 100%;
+	height: 45px;
+	position: relative;
+	border: 2px solid $blue;
+	// .select__button
+	&__button {
+		padding: 15px;
+		background-color: transparent;
+		font-family: "Poppins";
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		user-select: none;
+		cursor: pointer;
+		@media (any-hover: hover) {
+			&:hover {
+				.select__icon {
+					&::before,
+					&::after {
+						background-color: $blue-hover;
+					}
+				}
+			}
+		}
+	}
+	// .select__icon
+	&__icon {
+		position: relative;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			width: 15px;
+			height: 1px;
+			transition: all 0.3s ease 0s;
+			background-color: #333;
+		}
+		&::before {
+			top: calc(50% + 0.25px);
+			right: 11px;
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		&::after {
+			top: 50%;
+			left: -15px;
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+		&_active {
+			&::before,
+			&::after {
+				background-color: $blue;
+			}
+			&::before {
+				transform: translate(-50%, -50%) rotate(-45deg);
+			}
+			&::after {
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+		}
+	}
+	// .select__content
+	&__content {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		padding: 10px 0px;
+		background-color: #fff;
+		border: 2px solid $blue;
+		width: 100%;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: all 0.3s ease 0s;
+		&_active {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+			top: 115%;
+		}
+	}
+	// .select__item
+	&__item {
+		font-family: "Poppins";
+		padding: 10px 15px;
+		cursor: pointer;
+		background-color: #fff;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+				background-color: $blue;
+			}
+		}
+	}
+}

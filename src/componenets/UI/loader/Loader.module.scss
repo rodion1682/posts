@@ -1,0 +1,24 @@
+@import "../../../scss//consts.scss";
+
+.loader {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	// .loader__content
+	&__content {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		border: 3px dashed $blue;
+		animation: rotate 3s linear infinite;
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

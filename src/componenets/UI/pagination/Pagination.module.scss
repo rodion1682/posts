@@ -1,0 +1,30 @@
+@import "../../../scss//consts.scss";
+@import "../../../scss//fonts.scss";
+
+.pagination {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+	// .pagination__button
+	&__button {
+		font-family: "Poppins";
+		padding: 10px;
+		border: 2px solid $blue;
+		cursor: pointer;
+		background-color: transparent;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				border: 2px solid $blue-hover;
+				background-color: $blue-hover;
+				color: #fff;
+			}
+		}
+	}
+	// .pagination__button_active
+	&__button_active {
+		background-color: $blue;
+		color: #fff;
+	}
+}
